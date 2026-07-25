@@ -17,7 +17,7 @@
         <div class="w-22 h-22 mx-auto mb-5 rounded bg-surface flex items-center justify-center text-primary border-2 border-border shadow-brutal overflow-hidden shrink-0">
             <img id="profile-avatar-img" src="{{ path('app_avatar', {userId: userData.id}) }}" alt="Avatar" class="w-full h-full object-cover">
         </div>
-        <h2 id="profile-name" class="text-[26px] font-bold mb-2 m-0 font-unbounded tracking-tight uppercase">{{ name }}</h2>
+        <h2 id="profile-name" class="text-3xl font-bold mb-2 m-0 font-unbounded tracking-tight uppercase">{{ name }}</h2>
         <div id="profile-username" class="text-base text-primary mb-6 leading-relaxed font-semibold">@user{{ userData.id }}</div>
         
         <span class="bg-border text-surface py-0.5 px-2 rounded text-xs font-bold uppercase font-unbounded inline-block">
@@ -38,11 +38,11 @@
     <div class="grid grid-cols-2 gap-4 mb-6">
         <a href="{{ path('app_profile_following') }}" data-skeleton="following" class="bg-surface border-2 border-border rounded p-4 text-center flex flex-col justify-center mb-0 cursor-pointer transition-all shadow-brutal active:translate-brutal active:shadow-none no-underline text-inherit">
             <div class="flex justify-center items-center text-2xl font-bold mb-1 font-unbounded tracking-tight uppercase">{{ followingCount }}</div>
-            <div class="text-[12px] text-muted font-bold uppercase">Підписок</div>
+            <div class="text-xs text-muted font-bold uppercase">Підписок</div>
         </a>
         <a href="{{ path('app_profile_likes') }}" data-skeleton="likes" class="bg-surface border-2 border-border rounded p-4 text-center flex flex-col justify-center mb-0 cursor-pointer transition-all shadow-brutal active:translate-brutal active:shadow-none no-underline text-inherit">
             <div class="flex justify-center items-center text-2xl font-bold mb-1 font-unbounded tracking-tight uppercase">{{ likesCount }}</div>
-            <div class="text-[12px] text-muted font-bold uppercase">Вподобань</div>
+            <div class="text-xs text-muted font-bold uppercase">Вподобань</div>
         </a>
     </div>
 
@@ -55,7 +55,7 @@
         </div>
         <div class="flex-1">
             <div class="flex items-center text-lg font-bold mb-1 font-unbounded tracking-tight uppercase">Прив'язані акаунти</div>
-            <div class="text-[14px] text-primary mb-1 leading-normal font-semibold">Керуйте способами входу</div>
+            <div class="text-sm text-primary mb-1 leading-normal font-semibold">Керуйте способами входу</div>
         </div>
         <i data-lucide="chevron-right" class="text-muted w-6 h-6 stroke-2"></i>
     </a>
@@ -66,7 +66,7 @@
         </div>
         <div class="flex-1">
             <div class="flex items-center text-lg font-bold mb-1 font-unbounded tracking-tight uppercase">Акаунт створено</div>
-            <div class="text-[14px] text-primary mb-1 leading-normal font-semibold">{{ userData.createdAt ? userData.createdAt|date('d.m.Y') : 'Невідомо' }}</div>
+            <div class="text-sm text-primary mb-1 leading-normal font-semibold">{{ userData.createdAt ? userData.createdAt|date('d.m.Y') : 'Невідомо' }}</div>
         </div>
     </div>
 
@@ -77,7 +77,7 @@
             </div>
             <div class="flex-1">
                 <div class="flex items-center text-lg font-bold mb-1 font-unbounded tracking-tight uppercase">Публічна сторінка</div>
-                <div class="text-[14px] text-primary mb-1 leading-normal font-semibold">Моя сторінка</div>
+                <div class="text-sm text-primary mb-1 leading-normal font-semibold">Моя сторінка</div>
             </div>
             <i data-lucide="chevron-right" class="text-muted w-6 h-6 stroke-2"></i>
         </a>
@@ -88,7 +88,7 @@
             </div>
             <div class="flex-1">
                 <div class="flex items-center text-lg font-bold mb-1 font-unbounded tracking-tight uppercase">Публічна сторінка</div>
-                <div class="text-[14px] text-primary mb-1 leading-normal font-semibold">Немає прив'язаної сторінки</div>
+                <div class="text-sm text-primary mb-1 leading-normal font-semibold">Немає прив'язаної сторінки</div>
             </div>
         </div>
     {% endif %}

@@ -139,7 +139,7 @@
     </div>
 </div>
 
-<div class="fixed bottom-0 left-0 right-0 bg-surface border-t-2 border-border p-3 z-90 pb-[max(12px,env(safe-area-inset-bottom))]">
+<div class="fixed bottom-0 left-0 right-0 bg-surface border-t-2 border-border p-3 z-90 safe-pb">
     <form id="comment-form" onsubmit="submitComment(event)" class="flex items-center gap-3 w-full max-w-600 mx-auto">
         <input id="comment-input" type="text" placeholder="Написати коментар..." class="flex-1 py-3 px-4 bg-surface border-2 border-border rounded font-bold text-primary text-base outline-none shadow-brutal-sm transition-all focus:border-primary placeholder:text-muted placeholder:font-semibold" required />
         <button type="submit" class="w-12 h-12 bg-border text-surface border-2 border-border rounded flex items-center justify-center cursor-pointer shadow-brutal-sm transition-all active:translate-brutal-sm active:shadow-xs"><i data-lucide="send" class="w-5 h-5 stroke-2.5 relative -ml-1"></i></button>
